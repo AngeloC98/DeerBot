@@ -7,7 +7,7 @@ class General(commands.Cog):
 
     @commands.command()
     async def ping(self, ctx):
-        print("works")
+        """Returns pong"""
         await ctx.send("Pong")
 
 
