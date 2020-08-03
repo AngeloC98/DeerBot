@@ -1,5 +1,12 @@
+# Bot
+config.py
+
 # PyCharm
 .idea
 
+# vscode
+.vscode
+
 # Python
 .venv
+__pycache__
