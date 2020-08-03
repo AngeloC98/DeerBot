@@ -1,7 +1,7 @@
 from discord.ext import commands
 
 
-class Manangement(commands.Cog):
+class Management(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -25,3 +25,7 @@ class Manangement(commands.Cog):
     @commands.command()
     async def leave(self, ctx):
         pass
+
+
+def setup(bot):
+    bot.add_cog(Management(bot))
