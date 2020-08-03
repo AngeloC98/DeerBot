@@ -1,1 +1,2 @@
-token = 'add token here'
+token = "add token here"
+prefix = "add prefix here"
