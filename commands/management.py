@@ -23,8 +23,12 @@ class Management(commands.Cog):
         init_cogs(self.bot)
 
     @commands.command()
-    async def list_servers(self):
-        pass
+    async def list_servers(self, ctx):
+        """Sends a list of the servers the bot has joined"""
+        message = ""
+        for server in self.bot.guilds:
+            message += f"{server.name} | {server.id}"
+        await ctx.send(f"```{message}```")
 
     @commands.command()
     async def leave(self, ctx):
