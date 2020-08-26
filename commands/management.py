@@ -1,6 +1,7 @@
 from discord.ext import commands
 
 from deerbot import init_cogs
+from decorators import is_bot_owner
 
 
 class Management(commands.Cog):
@@ -9,20 +10,24 @@ class Management(commands.Cog):
         self.bot = bot
 
     @commands.command()
+    @is_bot_owner
     async def restart(self, ctx):
         pass
 
     @commands.command()
+    @is_bot_owner
     async def shutdown(self, ctx):
         """Logout and shut down the bot."""
         await ctx.bot.logout()
 
     @commands.command()
+    @is_bot_owner
     async def reload(self, ctx):
         """Reload the cogs found in the commands folder."""
         init_cogs(self.bot)
 
     @commands.command()
+    @is_bot_owner
     async def list_servers(self, ctx):
         """Sends a list of the servers the bot has joined"""
         message = ""
@@ -31,6 +36,7 @@ class Management(commands.Cog):
         await ctx.send(f"```{message}```")
 
     @commands.command()
+    @is_bot_owner
     async def leave(self, ctx):
         pass
 
