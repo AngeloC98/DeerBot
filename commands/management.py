@@ -39,6 +39,7 @@ class Management(commands.Cog):
     @commands.command()
     @is_bot_owner
     async def leave(self, ctx):
+        """Makes the bot leave the server"""
         await ctx.send("Leaving the server... Bye!")
         await ctx.guild.leave()
 
