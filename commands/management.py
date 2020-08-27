@@ -25,6 +25,7 @@ class Management(commands.Cog):
     async def reload(self, ctx):
         """Reload the cogs found in the commands folder."""
         init_cogs(self.bot)
+        await ctx.send("Cogs have been reloaded.")
 
     @commands.command()
     @is_bot_owner
@@ -38,7 +39,9 @@ class Management(commands.Cog):
     @commands.command()
     @is_bot_owner
     async def leave(self, ctx):
-        pass
+        """Makes the bot leave the server"""
+        await ctx.send("Leaving the server... Bye!")
+        await ctx.guild.leave()
 
 
 def setup(bot):
