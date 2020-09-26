@@ -1,3 +1,4 @@
 bot_owners = [01234, 56789] # add user ids as int
-token = "add token here"
-prefix = "add prefix here"
+token = 'add token here'
+prefix = 'add prefix here'
+mongo_url = 'url here'

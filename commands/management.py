@@ -25,22 +25,22 @@ class Management(commands.Cog):
     async def reload(self, ctx):
         """Reload the cogs found in the commands folder."""
         init_cogs(self.bot)
-        await ctx.send("Cogs have been reloaded.")
+        await ctx.send('Cogs have been reloaded.')
 
     @commands.command()
     @is_bot_owner
     async def list_servers(self, ctx):
         """Sends a list of the servers the bot has joined"""
-        message = ""
+        message = ''
         for server in self.bot.guilds:
-            message += f"{server.name} | {server.id}"
-        await ctx.send(f"```{message}```")
+            message += f'{server.name} | {server.id}'
+        await ctx.send(f'```{message}```')
 
     @commands.command()
     @is_bot_owner
     async def leave(self, ctx):
         """Makes the bot leave the server"""
-        await ctx.send("Leaving the server... Bye!")
+        await ctx.send('Leaving the server... Bye!')
         await ctx.guild.leave()
 
 
