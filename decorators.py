@@ -7,6 +7,6 @@ from config import bot_owners
 async def is_bot_owner(ctx):
     """Checks if message author is a bot owner"""
     if ctx.author.id not in bot_owners:
-        await ctx.send("Only bot owners are allowed to use this command!")
+        await ctx.send('Only bot owners are allowed to use this command!')
         return False
     return True
